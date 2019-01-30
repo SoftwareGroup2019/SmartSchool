@@ -21,6 +21,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $count = $stmt->rowCount();
 
      if($count > 0 ){
+
+         if(!empty(($_POST['rmb'])))
+         {
+             setcookie("id",$_POST['id'],time()+3600);
+             setcookie("pass",$_POST['pass'],time()+3600);
+         }
+         else
+         {
+             if (isset($_COOKIE['id']))
+             {
+                 setcookie("id","");
+             }
+             if (isset($_COOKIE['pass']))
+             {
+                 setcookie("pass","");
+             }
+             header('Location: index.php');
+         }
       
          $_SESSION['infoID'] = $id;
          header('Location: dashboard.php');
@@ -62,7 +80,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!--   Start of ID Field       -->
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate" data-length="6" name="id">
+          <input id="icon_prefix" type="text" class="validate" data-length="6" name="id"
+                 value="<?php if (isset($_COOKIE['id'])){ echo $_COOKIE['id'];}?>">
           <label for="icon_prefix">ID</label>
         </div>
 <!--  End of ID field        -->
@@ -70,7 +89,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!-- Start of Password Field         -->
         <div class="input-field col s12">
           <i class="material-icons prefix">lock</i>
-          <input id="icon_telephone" type="password" class="validate" data-length="9" name="pass">
+          <input id="icon_telephone" type="password" class="validate" data-length="9" name="pass"
+          value="<?php if (isset($_COOKIE['pass'])){ echo $_COOKIE['pass'];}?>">
           <label for="icon_telephone">Password</label>
         </div>
 <!--   End of Password Field          -->
@@ -79,7 +99,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
           <div class="col s12">
             <p>
       <label>
-        <input id="indeterminate-checkbox" type="checkbox" />
+        <input id="indeterminate-checkbox" type="checkbox" name="rmb"
+        <?php if (isset($_COOKIE['id'])){?> checked <?php }?>/>
         <span>Remember Me</span>
       </label>
     </p>

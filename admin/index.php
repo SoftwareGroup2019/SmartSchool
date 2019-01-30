@@ -24,6 +24,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
       echo "tawawawawawawawaw";
 
+      echo "dskfsdkf;ksd;fk;sdkf;s";
+
      if($count > 0 ){
 
          if(!empty(($_POST['rmb'])))

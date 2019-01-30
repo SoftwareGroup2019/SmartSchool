@@ -22,6 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
       echo "test this";
 
+      echo "tawawawawawawawaw";
+
      if($count > 0 ){
 
          if(!empty(($_POST['rmb'])))

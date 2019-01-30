@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
      if($count > 0 ){
       
-         $_SESSION['infoID'] = $id;
+       echo  $_SESSION['infoID'] = $id;
          header('Location: dashboard.php');
          exit();
       

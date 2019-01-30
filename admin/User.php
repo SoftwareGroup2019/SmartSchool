@@ -35,81 +35,6 @@ if(isset($_SESSION['infoID']))
             </div>
 
 
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="center modal-content">
-                    <h4>Enter Phone Number</h4>
-                    <div class="row">
-                        <div class="col s4">
-
-                        </div>
-                        <div class="col s4">
-                            <input placeholder="PhoneNum" id="phone" type="text" class="validate" name="">
-                        </div>
-                        <div class="col s4">
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s4">
-
-                        </div>
-                        <div class="col s4">
-                            <button class="btn btn-small" value="1">1</button>
-                            <button class="btn btn-small" value="2">2</button>
-                            <button class="btn btn-small" value="3">3</button>
-                        </div>
-                        <div class="col s4">
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s4">
-
-                        </div>
-                        <div class="col s4">
-                            <button class="btn btn-small" value="4">4</button>
-                            <button class="btn btn-small" value="5">5</button>
-                            <button class="btn btn-small" value="6">6</button>
-                        </div>
-                        <div class="col s4">
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s4">
-
-                        </div>
-                        <div class="col s4">
-                            <button class="btn btn-small" value="7">7</button>
-                            <button class="btn btn-small" value="8">8</button>
-                            <button class="btn btn-small" value="9">9</button>
-                        </div>
-                        <div class="col s4">
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s4">
-
-                        </div>
-                        <div class="col s4">
-                            <button class="btn btn-small" value="0">0</button>
-                        </div>
-                        <div class="col s4">
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col s12">
@@ -160,10 +85,10 @@ if(isset($_SESSION['infoID']))
                             <div class="row">
 
                                 <div class="input-field col s6">
-                                    <input placeholder="First Name" id="first_name" type="text" class="validate" name="">
+                                    <input placeholder="First Name" id="first_name" type="text" class="validate" name="FN">
                                 </div>
                                 <div class="input-field col s6">
-                                    <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                                    <input placeholder="Last Name" id="last_name" type="text" class="validate" name="LN">
                                 </div>
 
                             </div>
@@ -171,7 +96,7 @@ if(isset($_SESSION['infoID']))
                             <div class="row">
 
                                 <div class="input-field col s6">
-                                    <input placeholder="ID" id="ID" type="text" class="validate" name="">
+                                    <input placeholder="ID" id="ID" type="text" class="validate" name="id">
                                 </div>
 
                                 <div class="input-field col s6" id="IDGEN">
@@ -185,7 +110,7 @@ if(isset($_SESSION['infoID']))
 
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input placeholder="Password" id="Pass" type="text"  class="validate">
+                                    <input placeholder="Password" id="Pass" type="text"  class="validate" name="pass">
                                 </div>
 
                                 <div class="input-field col s6" id="PASSGEN">
@@ -199,7 +124,7 @@ if(isset($_SESSION['infoID']))
                             <div class="row">
 
                                 <div class="input-field col s12">
-                                    <input placeholder="Phone Number" id="first_name" type="tel" class="validate" name="">
+                                    <input placeholder="Phone Number" id="first_name" type="tel" class="validate" name="PN">
                                 </div>
                             </div>
 
@@ -248,6 +173,15 @@ if(isset($_SESSION['infoID']))
     elseif ($do == 'insert')
     {
         // add data data to database
+
+        echo $f_n = $_POST['FN'];
+        $l_n = $_POST['LN'];
+        $id = $_POST['id'];
+        $pass = $_POST['pass'];
+        $p_n = $_POST['PN'];
+
+        $in=new insert();
+        $in->INSERT_INTO("user")->COLUMNS("User_name,number")->VALUES("?,?")->result("qaz","45");
 
     }
 

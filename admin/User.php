@@ -153,11 +153,13 @@ if(isset($_SESSION['infoID']))
                             </div>
 
                             <br>
+
                             <!--  Start of Send Button of Login page      -->
                             <button class="btn waves-effect waves-light pulse" name="action" id="bt" >
                                 Submit
                                 <i class="material-icons right">send</i>
                             </button>
+
                         </form>
 
 
@@ -174,14 +176,14 @@ if(isset($_SESSION['infoID']))
     {
         // add data data to database
 
-        echo $f_n = $_POST['FN'];
+        $f_n = $_POST['FN'];
         $l_n = $_POST['LN'];
         $id = $_POST['id'];
         $pass = $_POST['pass'];
         $p_n = $_POST['PN'];
 
         $in=new insert();
-        $in->INSERT_INTO("user")->COLUMNS("User_name,number")->VALUES("?,?")->result("qaz","45");
+        $in->INSERT_INTO("user")->COLUMNS("name,infoID,password")->VALUES("?,?,?")->result($f_n,$id,$pass);
 
     }
 

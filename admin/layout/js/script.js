@@ -1,3 +1,11 @@
+/**
+ * Created by M-PC on 3/4/2019.
+ */
+
+/**
+ * Created by M-PC on 2/18/2019.
+ */
+
 
 ///// Start of Jquery code ////////////
 $(document).ready(function(){
@@ -82,6 +90,99 @@ $(document).ready(function(){
 
 
 
+    $('.bgid').click(function () {
+
+        $.ajax({
+
+            url:"idgen.php",
+            success:function (data) {
+
+                $('#ID').val(data);
+
+
+
+            }
+
+        });
+
+
+        $("form").submit(function (a) {
+            a.preventDefault();
+        });
+
+    });
+
+
+    $('.bgpass').click(function () {
+
+        $.ajax({
+
+            url:"passgen.php",
+            success:function (data) {
+
+                $('#Pass').val(data);
+            }
+
+
+        });
+
+        $("form").submit(function (a) {
+            a.preventDefault();
+        });
+
+
+
+
+    });
+
+    $('.sbsend').click(function () {
+
+        $i = $('#ID').val();
+        $p = $('#Pass').val();
+
+        if($i !== '' && $p !== '')
+        {
+
+            $('#sid').val($i);
+            $('#spass').val($p);
+            M.toast({html: 'infoCard Created'});
+            $('#scard').slideUp();
+        }
+
+        else
+        {
+            M.toast({html: ' Null'})
+        }
+
+
+    });
+
+
+    $('#bt2').click(function () {
+
+
+        $.ajax({
+
+            url: "User.php?do=insert",
+            type: "post",
+            data: $("#frm").serialize(),
+            success: function(d)
+            {
+                $('#frm')[0].reset();
+                M.toast({html: 'Student Added'})
+
+            }
+
+
+
+        });
+
+        $('#scard').slideDown();
+        $('#ID').val(" ");
+        $('#Pass').val(" ");
+    });
+
+
 });
 //////// End of Jquery code ////////////
 
@@ -101,54 +202,21 @@ function typeWriter() {
 }
 //////End InfoCard for Login Page//////////
 
-$()
 
 
-$('.bgid').click(function () {
+function deletbtn() {
 
-    $.ajax({
-
-        url:"idgen.php",
-        success:function (data) {
-
-            $('#ID').val(data);
+     var xhttp = new XMLHttpRequest();
 
 
 
-        }
+}
 
-    });
-
-
-    $("form").submit(function (a) {
-        a.preventDefault();
-    });
-
-});
-
-$('.bgpass').click(function () {
-
-    $.ajax({
-
-        url:"passgen.php",
-        success:function (data) {
-
-            $('#Pass').val(data);
-        }
-
-
-    });
-
-    $("form").submit(function (a) {
-        a.preventDefault();
-    });
-
-
-
-
-});
 
 
 /**
  * Created by M-ENG on 1/21/2019.
+ */
+/**
+ * Created by M-ENG on 3/14/2019.
  */

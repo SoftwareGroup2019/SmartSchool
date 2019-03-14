@@ -68,7 +68,7 @@ if(isset($_SESSION['infoID']))
                     </div>
                 </li>
                 <li><a href="User.php"><i class="material-icons">person_add</i>Add Student</a></li>
-                <li><a href="#!"><i class="material-icons">lock</i>Info Card</a></li>
+                <li><a href="infoCard.php"><i class="material-icons">lock</i>Info Card</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Settings</a></li>
                 <li><a class="waves-effect" href="#!">Class</a></li>

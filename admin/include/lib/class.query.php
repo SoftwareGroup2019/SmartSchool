@@ -1,7 +1,7 @@
 <?php
 /**
  *  $Request= new query();
-*   $Result = $Request->SELECT("ID,User_Name,number")->FROM("Table_name")WHERE("ID = 10")->result();
+*   $Result = $Request->SELECT("ID,User_Name,number")->FROM("Table_name")->WHERE("ID = 10")->result();
  */
 
 class query

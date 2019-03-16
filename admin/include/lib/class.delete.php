@@ -2,8 +2,8 @@
 
 /**
  *  Full Syntax 
- *   Delete = new delete() ;
- *   Delete->DELETE_FROM("Table_name")->WHERE("first_name = ? AND last_name = ? ")->result("Rebwar , Ramazan ");
+ *   $Delete = new delete() ;
+ *   $Delete->DELETE_FROM("Table_name")->WHERE("first_name = ? AND last_name = ? ")->result("Rebwar , Ramazan ");
  */
 class delete
 {

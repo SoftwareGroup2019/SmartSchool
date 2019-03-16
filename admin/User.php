@@ -72,13 +72,13 @@ if(isset($_SESSION['infoID']))
 
                        foreach ($Result as $row)
                        {
-                           echo "<tr>";
-
-                           echo "<td>" . $row['fn'] . "</td>";
-                           echo "<td>" . $row['ln'] . "</td>";
-                           echo "<td>" ;
-
                            ?>
+
+                           <tr id="delete<?php echo $row['ID'];?>">
+
+                           <td> <?php echo $row['fn']; ?>  </td>
+                           <td> <?php echo $row['ln']; ?>  </td>
+                               <td> </td>
 
                            <td>
                             <a href='profle.php?do=<?php echo $row['ID'];?>' class='btn-small tooltipped' data-position="right" data-tooltip="Profile">
@@ -91,15 +91,16 @@ if(isset($_SESSION['infoID']))
                                 </a>
                                </td>
 
-                            <td> <button onclick='deletbtn()' class='btn-small tooltipped' data-position="right" data-tooltip="Delete">
+                            <td> <button onclick='deletbtn(<?php echo $row['ID'];?>)' class='btn-small tooltipped' data-position="right" data-tooltip="Delete">
                                   <i class="material-icons">delete</i>
                                 </button>
                                 </td>
 
 
-                             <?php
-                           echo "</tr>";
 
+                           </tr>
+
+                           <?php
 
 
                        }
@@ -267,6 +268,16 @@ if(isset($_SESSION['infoID']))
 
                $in = new insert();
                $in->INSERT_INTO("user")->COLUMNS("infoID,password,role,fn,ln,Pn")->VALUES("?,?,?,?,?,?")->result($id, $pass, 1, $f_n, $l_n, $p_n);
+
+
+    }
+
+    elseif ($do == 'delete')
+    {
+        $id = $_POST['delete_id'];
+        $Delete = new delete() ;
+        $Delete->DELETE_FROM("user")->WHERE("ID = ?")->result("$id");
+
 
 
     }

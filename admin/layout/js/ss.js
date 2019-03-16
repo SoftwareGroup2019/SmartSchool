@@ -191,7 +191,7 @@ $(document).ready(function(){
 
 ////// InfoCard for Login Page//////////
 var i = 0;
-var txt = 'Info card'; /* The text */
+var txt = 'Info'; /* The text */
 var speed = 200; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
     if (i < txt.length) {
@@ -204,9 +204,25 @@ function typeWriter() {
 
 
 
-function deletbtn() {
+function deletbtn(id) {
 
-     var xhttp = new XMLHttpRequest();
+
+     if (confirm("Are You Sure?"))
+     {
+         $.ajax({
+
+             type:'post',
+             url:'User.php?do=delete',
+             data:{delete_id:id},
+             success: function (data) {
+
+                 $('#delete'+id).hide('slow');
+
+             }
+
+
+         });
+     }
 
 
 
@@ -214,9 +230,6 @@ function deletbtn() {
 
 
 
-/**
- * Created by M-ENG on 1/21/2019.
- */
 /**
  * Created by M-ENG on 3/14/2019.
  */

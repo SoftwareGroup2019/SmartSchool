@@ -71,7 +71,6 @@ if(isset($_SESSION['infoID']))
                 <li><a href="infoCard.php"><i class="material-icons">lock</i>Info Card</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Settings</a></li>
-                <li><a class="waves-effect" href="#!">Class</a></li>
                 <li><a class="dropdown-trigger  waves-effect" data-target='dropdown1' href="#!">Marks Sheet<i class="material-icons">
                             keyboard_arrow_down
                         </i>
@@ -82,7 +81,7 @@ if(isset($_SESSION['infoID']))
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Show Marks</a></li>
+                <li><a href="marks.php">Create Marks</a></li>
                 <li class="divider" tabindex="-1"></li>
                 <li><a href="#!"><i class="material-icons">send</i>Send Marks</a></li>
                 <li><a href="#!"><i class="material-icons">cloud</i>Send via SMS</a></li>

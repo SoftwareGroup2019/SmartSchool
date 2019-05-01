@@ -21,17 +21,10 @@ $id = $_GET['do'];
 
 $Request= new query();
 
-$Result = $Request->SELECT("*")->FROM("user")->WHERE("ID = ".$id)->result();
+$Result = $Request->SELECT("*")->FROM("student")->WHERE("ID = ".$id)->result();
  
         
-if(isset($_POST["UP"]))
-{
- $Up = new u();
- 
- $result=$Up -> UPDATE("user") ->SET("infoID = ? ") -> WHERE("ID=$id") -> result("9999");
 
-
-}
 
 
 

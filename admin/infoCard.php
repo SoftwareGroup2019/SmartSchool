@@ -12,82 +12,82 @@ if(isset($_SESSION['infoID']))
     include 'init.php';
 
 
+
+    $do = isset($_GET['do']) ? $_GET['do'] : 'Manage';
+
+    if ($do == 'Manage'){
     ?>
 
 
+    <h3 class="center">InfoCard</h3>
+
     <div class="container">
 
-        <div class="row" id="hid">
+        <form method="post" action="infoCard.php?do=print">
 
-            <div class="col s12 m4 l2"></div>
+            <select name="cc">
 
-            <div class="z-depth-2 col s12 m4 l8" id="log">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
 
-                <h4 class="center">infoCard</h4>
-
-                <div class="row">
-
-                    <div class="input-field col s6">
-                        <input placeholder="ID" id="ID" type="text" class="validate" name="id">
-                    </div>
-
-                    <div class="input-field col s6" id="IDGEN">
-                        <button class="btn bgid">
-                            Generate
-                            <i class="material-icons right">loop</i>
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="Password" id="Pass" type="text"  class="validate" name="pass">
-                    </div>
-
-                    <div class="input-field col s6" id="PASSGEN">
-                        <button class="btn bgpass">
-                            Generate
-                            <i class="material-icons right">loop</i>
-                        </button>
-                    </div>
-                </div>
-
-                <button class="btn bsend">
-                    Send
-                </button>
+            </select>
 
 
+            <select name="cc2">
 
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
 
+            </select>
 
-            </div>
+            <input type="submit" name="submit">
 
-            <div class="col s12 m4 l2"></div>
+        </form>
 
-        </div>
-
-
-
-        <div class="row">
-            <p>test fade</p>
-            <div class="input-field col s6">
-                <input placeholder="Password" id="kkk" type="text"  class="validate">
-            </div>
-        </div>
 
     </div>
 
-
-
-
-
-
-
-
-
-
     <?php
+
+    }
+
+    elseif($do == 'print'){
+
+      if (isset($_POST['submit'])){
+
+
+          $c = $_POST['cc'].$_POST['cc2'];
+          $stmt = $conn->prepare(" SELECT * FROM `student` WHERE class = '$c' ");
+          $stmt->execute();
+          $Result = $stmt->fetchAll();
+          echo "<h4 class='center'>$c</h4>";
+
+          foreach ($Result as $r){
+
+               $pass = $r['password'];
+               $infoid = $r['infoID'];
+              ?>
+
+              <h3><?php echo $pass; ?></h3>
+
+
+
+             <?php
+
+
+          }
+
+
+
+      }
+
+
+    }
 
 
 

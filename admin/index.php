@@ -20,12 +20,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt->execute(array($id,$pass));
     $count = $stmt->rowCount();
 
-      echo "test this";
-
-      echo "tawawawawawawawaw";
-
-      echo "dskfsdkf;ksd;fk;sdkf;s";
-
      if($count > 0 ){
 
          if(!empty(($_POST['rmb'])))

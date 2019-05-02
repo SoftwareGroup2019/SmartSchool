@@ -18,7 +18,7 @@ if(isset($_SESSION['infoID']))
 
     <div class="row">
 
-        <div class="col s3">
+        <div class="col s12 m3">
 
             <ul id="slide-out" class="sidenav">
                 <li><div class="user-view">
@@ -39,14 +39,14 @@ if(isset($_SESSION['infoID']))
                 <li><a class="waves-effect" href="#!">Backup</a></li>
             </ul>
 
-            <div class="card-panel white">
+            <div class="center card-panel white">
 
 
                 <a href="#" data-target="slide-out" class="sidenav-trigger">
                     <img class="circle responsive-img" src="layout/img/me.jpg" height="70px" width="70px">
                 </a>
 
-                <p id="ma">
+                <p>
                     <a href="#" data-target="slide-out" class="sidenav-trigger">
                         Manager Account
                     </a>
@@ -55,7 +55,7 @@ if(isset($_SESSION['infoID']))
 
         </div>
 
-        <div class="col s3">
+        <div class="col s12 m3">
             <ul id="slide-out2" class="sidenav">
                 <li>
                     <div class="user-view">
@@ -87,12 +87,12 @@ if(isset($_SESSION['infoID']))
                 <li><a href="#!"><i class="material-icons">cloud</i>Send via SMS</a></li>
             </ul>
 
-            <div class="card-panel white">
+            <div class="center card-panel white">
                 <a href="#" data-target="slide-out2" class="sidenav-trigger">
                     <img class="circle responsive-img" src="layout/img/student.png" height="70px" width="70px">
                 </a>
 
-                <p id="ma2">
+                <p>
                     <a href="#" data-target="slide-out2" class="sidenav-trigger">
                         Student Management
                     </a>
@@ -100,7 +100,7 @@ if(isset($_SESSION['infoID']))
             </div>
         </div>
 
-        <div class="col s3">
+        <div class="col s12 m3">
             <ul id="slide-out3" class="sidenav">
                 <li>
                     <div class="user-view">
@@ -120,12 +120,12 @@ if(isset($_SESSION['infoID']))
                 <li><a class="waves-effect" href="#!">Notifications</a></li>
                 <li><a class="waves-effect" href="#!">Messages</a></li>
             </ul>
-            <div class="card-panel white">
+            <div class="center card-panel white">
                 <a href="#" data-target="slide-out3" class="sidenav-trigger">
                     <img class="circle responsive-img" src="layout/img/teacher.png" height="70px" width="70px">
                 </a>
 
-                <p id="ma3">
+                <p>
                     <a href="#" data-target="slide-out3" class="sidenav-trigger">
                         Teacher Management
                     </a>
@@ -134,7 +134,7 @@ if(isset($_SESSION['infoID']))
         </div>
 
 
-        <div class="col s3">
+        <div class="col s12 m3">
             <ul id="slide-out4" class="sidenav">
                 <li>
                     <div class="user-view">
@@ -155,12 +155,12 @@ if(isset($_SESSION['infoID']))
                 <li><a class="waves-effect" href="#!">Class Routine</a></li>
                 <li><a class="waves-effect" href="#!">Messages</a></li>
             </ul>
-            <div class="card-panel white">
+            <div class="center card-panel white">
                 <a href="#" data-target="slide-out4" class="sidenav-trigger">
                     <img class="circle responsive-img" src="layout/img/parent.png" height="70px" width="70px">
                 </a>
 
-                <p id="ma4">
+                <p>
                     <a href="#" data-target="slide-out4" class="sidenav-trigger">
                         Parent Management
                     </a>

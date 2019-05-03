@@ -7,7 +7,7 @@ if(isset($_SESSION['infoID']))
     $pagetitle = "Dashboard";
       include "init.php";
 
-
+echo "test";
     ?>
 
     <div class="row">
@@ -180,9 +180,9 @@ if(isset($_SESSION['infoID']))
 
 
      <?php
-    
-    
-    
+
+
+
     include $tpl . "footer.php";
 }
 

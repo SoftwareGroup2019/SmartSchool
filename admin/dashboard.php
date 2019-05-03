@@ -7,7 +7,7 @@ if(isset($_SESSION['infoID']))
     $pagetitle = "Dashboard";
       include "init.php";
 
-echo "test";
+
     ?>
 
     <div class="row">

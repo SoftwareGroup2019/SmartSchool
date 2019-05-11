@@ -2,13 +2,13 @@
 
 /**
  * $Up = new update();
- * $result=$Up->UPDATE("Table_name")->SET(" Last_name=?")->WHERE("Last_name = Slah")->result("Selah");
+ * $result=$Up->UPDATE("Table_name")->SET(" Last_name=?")->WHERE("Last_name = ?")->result("Selah");
  */
 class update
 {
-	
+
     private $table;
-    
+
     private $where;
 
     private $sets;
@@ -19,7 +19,7 @@ class update
 	$this->table=$table;
 
 	return $this;
-     
+
      }
 
 
@@ -28,17 +28,17 @@ class update
 	    $args=func_get_args();
 
 		$this->sets=implode(",",$args);
-	
+
 		return $this;
-	
+
 	  }
-	  
+
 	function WHERE($where) {
-	
+
 		$this->where=$where;
-	
+
 		return $this;
-	
+
 	  }
 
 

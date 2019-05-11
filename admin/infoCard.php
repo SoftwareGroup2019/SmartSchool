@@ -66,14 +66,90 @@ if(isset($_SESSION['infoID']))
           $stmt->execute();
           $Result = $stmt->fetchAll();
           echo "<h4 class='center'>$c</h4>";
+?>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col s12 m4 l2">
+
+    </div>
+
+    <div class="col s12 m4 l8">
+      <a href="#">PrintAll<i class="material-icons">printer</i></a>
+    </div>
+
+    <div class="col s12 m4 l2">
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+</div>
+
+
+<?php
 
           foreach ($Result as $r){
 
                $pass = $r['password'];
                $infoid = $r['infoID'];
+               $name = $r['name'];
+               $class = $r['class'];
               ?>
 
-              <h3><?php echo $pass; ?></h3>
+                <div class="container">
+
+                  <div class="row">
+
+                    <div class="col s12 m4 l2">
+
+                    </div>
+
+                    <div class="col s12 m4 l8">
+
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">Name: <?php echo $name; ?></span>
+                          <p>ID: <?php echo $infoid; ?></p>
+                          <p>Password: <?php echo $pass; ?></p>
+                          <p>class: <?php echo $class; ?></p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Print<i class="material-icons">printer</i></a>
+                          <a href="#">Profile<i class="material-icons">person</i></a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col s12 m4 l2">
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
 
 
 

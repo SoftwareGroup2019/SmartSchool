@@ -182,6 +182,14 @@ $(document).ready(function(){
         $('#Pass').val(" ");
     });
 
+$('#show').click(function(){
+
+$('#pro').slideUp();
+$('#hid').css("display","inline");
+
+
+});
+
 
 });
 //////// End of Jquery code ////////////
@@ -191,7 +199,7 @@ $(document).ready(function(){
 
 ////// InfoCard for Login Page//////////
 var i = 0;
-var txt = 'Info'; /* The text */
+var txt = 'Info card'; /* The text */
 var speed = 200; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
     if (i < txt.length) {

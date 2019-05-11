@@ -182,9 +182,7 @@ body
 }
 
 
-
-
-
-
-
-
+#hid
+{
+  display: none;
+}

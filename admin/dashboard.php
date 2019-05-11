@@ -7,6 +7,13 @@ if(isset($_SESSION['infoID']))
     $pagetitle = "Dashboard";
       include "init.php";
 
+      $stmt = $conn->prepare(" SELECT * FROM `student`");
+      $stmt->execute();
+      $Result = $stmt->fetchAll();
+      $c = $stmt->rowCount();
+
+
+
 
     ?>
 
@@ -64,7 +71,7 @@ if(isset($_SESSION['infoID']))
                         </div>
 
                         <a href="#name"><span class="white-text name">Student Management</span></a>
-                        <a href="#email"><span class="white-text email">244 Student</span></a>
+                        <a href="#email"><span class="white-text email"><?php echo $c;?> Student</span></a>
                     </div>
                 </li>
                 <li><a href="User.php"><i class="material-icons">person_add</i>Add Student</a></li>

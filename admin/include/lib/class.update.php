@@ -4,7 +4,7 @@
  * $Up = new update();
  * $result=$Up->UPDATE("Table_name")->SET(" Last_name=?")->WHERE("Last_name = ?")->result("Selah");
  */
-class update
+class upset
 {
 
     private $table;

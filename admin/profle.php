@@ -156,7 +156,7 @@ $Result = $Request->SELECT("*")->FROM("student")->WHERE("ID = ".$id)->result();
   $class = $_POST['c'];
 echo  $pn = $_POST['PN'];
 
-    $Up = new update();
+    $Up = new upset();
    // $result=$Up->UPDATE("student")->SET("name=?")->WHERE("ID = " . $id)->result($name);
 $result=$Up->UPDATE("student")->SET("name=?")->WHERE("ID = ?")->result($name,$id);
    echo "TRue";

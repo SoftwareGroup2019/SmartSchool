@@ -3,37 +3,25 @@
 
 
 
-include_once("DataBase/class.connection.php");
+include_once("class-connection.php");
 
-include_once("DataBase/class.query.php");
+include_once("class.query.php");
 
-include_once("DataBase/class.insert.php");
+include_once("class.insert.php");
 
-include_once("DataBase/class.delete.php");
+include_once("class.delete.php");
 
-include_once("DataBase/class.update.php");
+include_once("class.update.php");
 
 
 
-$conn=new connection("localhost","root","","fw");
+$conn=new connection("localhost","root","","mydb");
 $conn=$conn->connect();
 
-  $qu= new query();
-  $row = $qu->SELECT("ID,User_Name,number")->FROM("test")->result();
-foreach ($row as $key => $value) {
-
-echo $value["User_Name"]."<br> ";
-
-}
-$de=new delete();
-
-$id_to_delet=3;
-
-$de->DELETE_FROM("test")->WHERE("ID = ?")->result($id_to_delet);
-
-$in=new insert();
-$in->INSERT_INTO("test")->COLUMNS("User_name,number")->VALUES("?,?")->result("qaz","45");
-
+$Up = new upset();
+$name ="REbwar";
+$id = 1;
+$result=$Up->UPDATE("student")->SET("name=?")->WHERE("ID = ?")->result($name,$id);
 
 
 

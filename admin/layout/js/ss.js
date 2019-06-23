@@ -60,7 +60,7 @@ $(document).ready(function(){
     /////TypeWriter of Login Page////////////
 
     $("#ghost").ghosttyper({
-        messages: ['Welcome to Smart School', 'Please Enter InfoCard', 'Developed By','Software Group','Enjoy!!!'],
+        messages: ['کلیک بکە', 'کلیک بکە', 'کلیک بکە','کلیک بکە','کلیک بکە'],
 
         // animation speed for typing effect
         timeWrite: 80,
@@ -190,6 +190,12 @@ $('#hid').css("display","inline");
 
 });
 
+$('#pro').click(function(){
+
+$('#spro').load("load_pro.php");
+
+});
+
 
 });
 //////// End of Jquery code ////////////
@@ -199,7 +205,7 @@ $('#hid').css("display","inline");
 
 ////// InfoCard for Login Page//////////
 var i = 0;
-var txt = 'Info card'; /* The text */
+var txt = ' کارتی چوونەژوورەوە'; /* The text */
 var speed = 200; /* The speed/duration of the effect in milliseconds */
 function typeWriter() {
     if (i < txt.length) {

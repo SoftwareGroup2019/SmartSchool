@@ -7,11 +7,11 @@ if(isset($_SESSION['infoID']))
 {
     include 'init.php';
 
-    
+
     $do = isset($_GET['do']) ? $_GET['do'] : 'Manage';
-    
+
     if($do == 'Manage'){
-        
+
        ?>
 
 
@@ -21,15 +21,20 @@ if(isset($_SESSION['infoID']))
                     <a href="dashboard.php"><i class="material-icons" id="back">keyboard_backspace</i></a>
                 </div>
                 <div class="col s10">
-                    <h4 class="center" style="color: #263238; font-family: ">Add Student</h4>
+                    <h4 class="center" style="color: #263238;">زیادکردنی قوتابی</h4>
                 </div>
             </div>
             <div class="row">
                  <div class="col s12">
-                     <a class="btn waves-effect waves-light" href="User.php?do=add">
-                         New Student
+                     <a class="btn btn-small blue darken-1 waves-effect waves-light" href="User.php?do=add">
+                         قوتابی زیاد بکە
                          <i class="material-icons right">add</i>
                      </a>
+                     <a class="btn btn-small waves-effect waves-light" href="p.php">
+                           فایلی ئەکسڵ
+                         <i class="material-icons right">add</i>
+                     </a>
+
                  </div>
 
             </div>
@@ -52,69 +57,59 @@ if(isset($_SESSION['infoID']))
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col s12">
-                    <?php
-                    $Request= new query();
-                    $Result = $Request->SELECT("*")->FROM("student")->result();
-                    ?>
-                    <table class="responsive-table striped">
-                        <thead>
-                        <tr>
-                            <th>Student Name</th>
 
-                            <th></th>
-                        </tr>
-                        </thead>
 
-                        <tbody>
-                       <?php
+     <div class="row">
 
-                       foreach ($Result as $row)
-                       {
-                           ?>
+     <div class="input-field col s4">
+     <select>
+       <option value="" disabled selected>Choose your option</option>
+       <option value="7">7</option>
+       <option value="8">8</option>
+       <option value="9">9</option>
+       <option value="10">10</option>
+       <option value="11">11</option>
+       <option value="12">12</option>
+     </select>
+     <label>Grade</label>
+   </div>
 
-                           <tr id="delete<?php echo $row['ID'];?>">
+   <div class="input-field col s4">
+   <select>
+     <option value="" disabled selected>Choose your option</option>
+     <option value="A">A</option>
+     <option value="B">B</option>
+     <option value="C">C</option>
 
-                           <td> <?php echo $row['name']; ?>  </td>
+   </select>
+   <label>Class</label>
+ </div>
 
-                               <td> </td>
-
-                           <td>
-                            <a href='profle.php?do=<?php echo $row['ID'];?>' class='btn-small tooltipped' data-position="right" data-tooltip="Profile">
-                                  <i class="material-icons">person</i>
-                                </a>
-                               </td>
-
-                            <td> <a href='profle.php' class='btn-small tooltipped' data-position="right" data-tooltip="Mark">
-                                  <i class="material-icons">assignment</i>
-                                </a>
-                               </td>
-
-                            <td> <button onclick='deletbtn(<?php echo $row['ID'];?>)' class='btn-small tooltipped' data-position="right" data-tooltip="Delete">
-                                  <i class="material-icons">delete</i>
-                                </button>
-                                </td>
+ <div class="input-field col s4" style="padding-top:10px;">
+   <button class="btn waves-effect waves-light" type="submit" name="action" id="pro">Submit
+      <i class="material-icons right">send</i>
+    </button>
+</div>
 
 
 
-                           </tr>
+     </div>
 
-                           <?php
+<div class="row" id="spro">
 
 
-                       }
 
-                       ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
+
+</div>
+
+
         </div>
 
 
 
-        
+
+
 
 <?php
     }
@@ -131,7 +126,7 @@ if(isset($_SESSION['infoID']))
 
                 <div class="z-depth-2 col s12 m4 l8" id="log">
 
-                    <h4 class="center">infoCard</h4>
+                    <h4 class="center">زیادکردنی کارت</h4>
 
                     <div class="row">
 
@@ -141,7 +136,7 @@ if(isset($_SESSION['infoID']))
 
                         <div class="input-field col s6" id="IDGEN">
                             <button class="btn bgid">
-                                Generate
+                                کلیک بکە
                                 <i class="material-icons right">loop</i>
                             </button>
                         </div>
@@ -155,14 +150,14 @@ if(isset($_SESSION['infoID']))
 
                         <div class="input-field col s6" id="PASSGEN">
                             <button class="btn bgpass">
-                                Generate
+                                کلیک بکە
                                 <i class="material-icons right">loop</i>
                             </button>
                         </div>
                     </div>
 
                     <button class="btn sbsend">
-                        Send
+                        بنێرە
                     </button>
 
 
@@ -179,7 +174,7 @@ if(isset($_SESSION['infoID']))
 
                 <div class="z-depth-2 col s12 m4 l8" id="log">
 
-                    <h4 class="center">Student Info</h4>
+                    <h4 class="center">زانیاری قوتابی</h4>
 
 
                         <form class="center col s12" id="frm">
@@ -222,7 +217,7 @@ if(isset($_SESSION['infoID']))
 
                             <br>
 
-                          <input type="button" id="bt2" class="btn-small" value="Submit" name="aa">
+                          <input type="button" id="bt2" class="btn-small" value="زیاد کردن" name="aa">
 
                         </form>
 
@@ -263,11 +258,11 @@ if(isset($_SESSION['infoID']))
     }
 
 
-    
-    
 
-    
-    
+
+
+
+
    include $tpl . 'footer.php';
 }
 

@@ -129,7 +129,7 @@ if (isset($_SESSION['infoID'])){
 
                ?>
                <div class="container">
-                <table class="responsive-table striped">
+                <table class="responsive-table">
 
                     <thead>
 
@@ -250,4 +250,3 @@ else{
     exit();
 
 }
-

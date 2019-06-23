@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper">
-        <a href="dashboard.php" class="hide-on-small-only brand-logo">Smart School</a>
+        <a href="dashboard.php" class="hide-on-small-only brand-logo">قوتابخانەی زیرەک</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="">
@@ -34,5 +34,3 @@
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
 </ul>
-
-

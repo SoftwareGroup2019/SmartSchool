@@ -19,7 +19,7 @@ if(isset($_SESSION['infoID']))
 
     <div class="row">
         <div class="s12 center">
-            <h4>Welcome to Admin Panel</h4>
+            <h4>بەخێربێن بۆ پەڕەی بەڕێوبردن</h4>
         </div>
     </div>
 
@@ -33,12 +33,12 @@ if(isset($_SESSION['infoID']))
                             <img class="responsive-image" src="layout/img/bg.jpeg">
                         </div>
                         <a href="#user"><img class="circle" src="layout/img/me.jpg"></a>
-                        <a href="#name"><span class="white-text name">Mohamad Kamaran</span></a>
-                        <a href="#email"><span class="white-text email">M.00129@gmail.com</span></a>
+                        <a href="#name"><span class="white-text name">محمد کامەران</span></a>
+                        <a href="#email"><span class="white-text name">بەرێوبەری گشتی</span></a>
                     </div></li>
-                <li><a href="#!"><i class="material-icons">photo_camera</i>Change Photo</a></li>
-                <li><a href="#!"><i class="material-icons">edit</i>Change Name</a></li>
-                <li><a href="#!"><i class="material-icons">mail</i>Change Mail</a></li>
+                <li><a href="#!"><i class="material-icons">photo_camera</i>گۆڕینی وێنە</a></li>
+                <li><a href="#!"><i class="material-icons">edit</i>گۆرینی ناو</a></li>
+
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Settings</a></li>
                 <li><a class="waves-effect" href="#!">Themes</a></li>
@@ -55,7 +55,7 @@ if(isset($_SESSION['infoID']))
 
                 <p>
                     <a href="#" data-target="slide-out" class="sidenav-trigger">
-                        Manager Account
+                        ئەکاونتی بەڕێوبەڕ
                     </a>
                 </p>
             </div>
@@ -70,28 +70,18 @@ if(isset($_SESSION['infoID']))
                             <img class="responsive-image" src="layout/img/bg.jpeg">
                         </div>
 
-                        <a href="#name"><span class="white-text name">Student Management</span></a>
-                        <a href="#email"><span class="white-text email"><?php echo $c;?> Student</span></a>
+                        <a href="#name"><span class="white-text name">بەرێوربردنی قوتابیان</span></a>
+                        <a href="#email"><span class="white-text email">قوتابی <?php echo $c;?></span></a>
                     </div>
                 </li>
-                <li><a href="User.php"><i class="material-icons">person_add</i>Add Student</a></li>
-                <li><a href="infoCard.php"><i class="material-icons">lock</i>Info Card</a></li>
+                <li><a href="User.php"><i class="material-icons">person_add</i>زیادکردنی قوتابی</a></li>
+                <li><a href="infoCard.php"><i class="material-icons">lock</i>کارتی چوونەژوورەوە</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Settings</a></li>
-                <li><a class="dropdown-trigger  waves-effect" data-target='dropdown1' href="#!">Marks Sheet<i class="material-icons">
-                            keyboard_arrow_down
-                        </i>
-                    </a></li>
+                <li><a href="marks.php"><i class="material-icons">add</i>زیادکردنی نمرە</a></li>
+                  <li><a href="#!"><i class="material-icons">send</i>ناردنەوەی نمرە</a></li>
                 <li><a class="waves-effect" href="#!">Notification</a></li>
                 <li><a class="waves-effect" href="#!">Messages</a></li>
-            </ul>
-
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="marks.php">Create Marks</a></li>
-                <li class="divider" tabindex="-1"></li>
-                <li><a href="#!"><i class="material-icons">send</i>Send Marks</a></li>
-                <li><a href="#!"><i class="material-icons">cloud</i>Send via SMS</a></li>
             </ul>
 
             <div class="center card-panel white">
@@ -101,7 +91,7 @@ if(isset($_SESSION['infoID']))
 
                 <p>
                     <a href="#" data-target="slide-out2" class="sidenav-trigger">
-                        Student Management
+                        قوتابیان
                     </a>
                 </p>
             </div>
@@ -115,8 +105,8 @@ if(isset($_SESSION['infoID']))
                             <img class="responsive-image" src="layout/img/bg.jpeg">
                         </div>
 
-                        <a href="#name"><span class="white-text name">Teacher Management</span></a>
-                        <a href="#email"><span class="white-text email">45 Teachers</span></a>
+                        <a href="#name"><span class="white-text name">بەرێوربردنی مامۆستایان</span></a>
+                        <a href="#email"><span class="white-text email">45 مامۆستا</span></a>
                     </div>
                 </li>
                 <li><a href="#!"><i class="material-icons">person_add</i>Add Teacher</a></li>
@@ -134,7 +124,7 @@ if(isset($_SESSION['infoID']))
 
                 <p>
                     <a href="#" data-target="slide-out3" class="sidenav-trigger">
-                        Teacher Management
+                        مامۆستایان
                     </a>
                 </p>
             </div>
@@ -149,8 +139,8 @@ if(isset($_SESSION['infoID']))
                             <img class="responsive-image" src="layout/img/bg.jpeg">
                         </div>
 
-                        <a href="#name"><span class="white-text name">Parent Management</span></a>
-                        <a href="#email"><span class="white-text email">122 Parents</span></a>
+                        <a href="#name"><span class="white-text name">بەرێوربردنی دایک و باوک</span></a>
+                        <a href="#email"><span class="white-text email">122 دایک و باوک</span></a>
                     </div>
                 </li>
                 <li><a href="#!"><i class="material-icons">person_add</i>Add Parent</a></li>
@@ -169,7 +159,7 @@ if(isset($_SESSION['infoID']))
 
                 <p>
                     <a href="#" data-target="slide-out4" class="sidenav-trigger">
-                        Parent Management
+                        دایک و باوک
                     </a>
 
                 </p>

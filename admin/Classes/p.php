@@ -1,14 +1,11 @@
 <?php
-session_start();
-if(isset($_SESSION['infoID']))
-{
-	include 'init.php';
+
 
 if (isset($_FILES['ecx'])) {
 	// code...
 			$name = $_FILES['ecx']['name'];
 			$s = $name;
-	    require_once "PHPExcel.php";
+	    require_once "PHPExcel/IOFactory.php";
 			$tmpfname = $s;
 			$excelReader = PHPExcel_IOFactory::createReaderForFile($tmpfname);
 			$excelObj = $excelReader->load($tmpfname);
@@ -28,9 +25,13 @@ if (isset($_FILES['ecx'])) {
 			}
 			echo "</table>";
 }
+
 else {
+	// code...
 
 ?>
+
+
 
 <form action="" method="post" enctype="multipart/form-data">
 
@@ -38,21 +39,8 @@ else {
 <input type="submit" value="fetch"/>
 
 </form>
-
 <?php
 }
 
-   include $tpl . 'footer.php';
 
-}
-
-else{
-
-    header("Location:index.php");
-    exit();
-
-}
-
-
-
-?>
+ ?>

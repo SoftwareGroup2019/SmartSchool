@@ -30,7 +30,7 @@ if(isset($_SESSION['infoID']))
                          قوتابی زیاد بکە
                          <i class="material-icons right">add</i>
                      </a>
-                     <a class="btn btn-small waves-effect waves-light" href="p.php">
+                     <a class="btn btn-small waves-effect waves-light" href="Classes/p.php">
                            فایلی ئەکسڵ
                          <i class="material-icons right">add</i>
                      </a>

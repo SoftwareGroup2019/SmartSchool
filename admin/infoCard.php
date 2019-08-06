@@ -97,7 +97,7 @@ if(isset($_SESSION['infoID']))
 <?php
 
           foreach ($Result as $r){
-
+               $id = $r['ID'];
                $pass = $r['password'];
                $infoid = $r['infoID'];
                $name = $r['name'];
@@ -123,7 +123,7 @@ if(isset($_SESSION['infoID']))
                         </div>
                         <div class="card-action">
                           <a href="#">Print<i class="material-icons">printer</i></a>
-                          <a href="#">Profile<i class="material-icons">person</i></a>
+                          <a href="profle.php?do=<?php echo $id; ?>">Profile<i class="material-icons">person</i></a>
                         </div>
                       </div>
 

@@ -48,6 +48,7 @@ $Result = $Request->SELECT("*")->FROM("student")->WHERE("ID = ".$id)->result();
 
             <div class="z-depth-2 center col s12 m4 l8" id="log">
 
+
                 <img class="circle responsive-img" src="layout/img/me.jpg" height="70px" width="70px">
                 <h5 class="center"><?php echo $name;?></h5>
                 <h6 class="center">----------</h6>
@@ -66,6 +67,7 @@ $Result = $Request->SELECT("*")->FROM("student")->WHERE("ID = ".$id)->result();
                     <button class="btn btn-small" name="update" id="show">  <i class="material-icons">edit</i></button>
                     <button class="btn-small"><i class="material-icons">delete</i></button>
                     <button class="btn-small waves-effect waves-light pulse"><i class="material-icons">notifications</i> </button>
+                    <a href="infoCard.php">Back</a>
                 </div>
 
 
@@ -90,7 +92,7 @@ $Result = $Request->SELECT("*")->FROM("student")->WHERE("ID = ".$id)->result();
 
                 <div class="z-depth-2 col s12 m4 l8" id="log">
 
-                    <h4 class="center">Edite Students</h4>
+                    <h4 class="center">Edit Students</h4>
 
 
                         <form method="post" action="profle.php?do=<?php echo $id; ?>"  class="center col s12" id="frm">
